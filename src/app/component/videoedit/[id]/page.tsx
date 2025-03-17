@@ -15,6 +15,8 @@ const VideoEdit: React.FC = () => {
   // Fetch Video Details
   const { data: video, isLoading } = useQuery(["video", id], async () => {
     const response = await database.getDocument("67d7c818000549f9a3f0", "67d7c83e000abb188865", id);
+    console.log('video',video);
+    
     setVideoName(response.name); // Set initial value
     return response;
   });

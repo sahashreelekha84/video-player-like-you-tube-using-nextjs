@@ -39,7 +39,7 @@ const VideoList: React.FC = () => {
   const [durations, setDurations] = useState<{ [key: string]: string }>({});
   const router = useRouter();
 
-  const { data: videos ,isLoading} = useQuery("videos", async () => {
+  const { data: videos } = useQuery("videos", async () => {
     const response = await database.listDocuments("67d7c818000549f9a3f0", "67d7c83e000abb188865");
     return response.documents as unknown as Video[];
   });

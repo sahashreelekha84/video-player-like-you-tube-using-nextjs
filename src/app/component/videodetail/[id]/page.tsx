@@ -11,6 +11,7 @@ interface Video {
   name: string;
   description: string;
   fileUrl: string;
+  
 }
 
 const VideoDetails: React.FC = () => {
